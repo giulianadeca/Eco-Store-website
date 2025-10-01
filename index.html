@@ -43,7 +43,7 @@
         </div>
 
         <!-- === Main header: logo + search + action === -->
-                <div class="main-header">
+        <div class="main-header">
             <div class="container">
                 <div class="header-row header-row--search">
                     <!-- Logo on the left -->
@@ -94,9 +94,130 @@
     </header>
 
     <main>
+        <!-- 1) HERO -->
+        <section class="hero">
+            <div class="container hero-wrap">
+                <div class="hero-copy">
+                    <h1>Eco choices for everyday life</h1>
+                    <p>Natural, sustainable and fair-priced products curated for your routine.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="products.html">Shop now</a>
+                        <a class="btn btn--ghost" href="index.html">Learn more</a>
+                    </div>
+                </div>
+                <picture class="hero-media">
+                    <img src="images/index/hero.png" alt="Eco-friendly products on a table">
+                </picture>
+            </div>
+        </section>
 
-        hgmkjh
 
+        <!-- 2) CATEGORIES -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <header class="sec-head">
+                    <h2>Shop by category</h2>
+                    <a href="products.html" class="link-more">View all</a>
+                </header>
+                <div class="grid-cards">
+                    <!-- use imagens 3:2 (ex.: 900×600) -->
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-cosmetics.png" alt="Cosmetics">
+                        <span>Cosmetics</span>
+                    </a>
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-food.png" alt="Food & Drinks">
+                        <span>Food & Drinks</span>
+                    </a>
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-baby.png" alt="Baby">
+                        <span>Baby</span>
+                    </a>
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-kids.png" alt="Kids">
+                        <span>Kids</span>
+                    </a>
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-home.png" alt="Home">
+                        <span>Home</span>
+                    </a>
+                    <a class="cat-card" href="#">
+                        <img src="images/index/cat-gifts.png" alt="Gifts">
+                        <span>Gifts</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3) ABOUT TEASER -->
+        <section class="about-teaser">
+            <div class="container about-wrap">
+                <div class="about-media">
+                    <img src="images/index/about-teaser.png" alt="Team packing eco products">
+                </div>
+                <div class="about-copy">
+                    <h2>Why we care</h2>
+                    <p>We partner with small producers and certify ingredients to reduce plastic and carbon footprint
+                        across our supply chain.</p>
+                    <ul class="checklist">
+                        <li>Plastic-free or low-impact packaging</li>
+                        <li>Ethically sourced ingredients</li>
+                        <li>Fair prices for makers and customers</li>
+                    </ul>
+                    <br>
+                    <a class="btn" href="about.html">About us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) FEATURED PRODUCTS -->
+        <section class="featured" id="featured">
+            <div class="container">
+                <header class="sec-head">
+                    <h2>Featured products</h2>
+                    <a href="products.html" class="link-more">See more</a>
+                </header>
+
+                <div class="grid-products">
+                    <!-- card (use thumbs quadradas ~600×600) -->
+                    <article class="p-card">
+                        <a href="#" class="p-media">
+                            <img src="images/index/p1.png" alt="Bamboo Toothbrush">
+                        </a>
+                        <h3 class="p-title"><a href="#">Bamboo Toothbrush</a></h3>
+                        <p class="p-price">€4.90</p>
+                        <button class="btn p-add">Add to cart</button>
+                    </article>
+
+                    <article class="p-card">
+                        <a href="#" class="p-media">
+                            <img src="images/index/p2.png" alt="Solid Shampoo Bar">
+                        </a>
+                        <h3 class="p-title"><a href="#">Solid Shampoo Bar</a></h3>
+                        <p class="p-price">€7.50</p>
+                        <button class="btn p-add">Add to cart</button>
+                    </article>
+
+                    <article class="p-card">
+                        <a href="#" class="p-media">
+                            <img src="images/index/p3.png" alt="Reusable Cotton Pads">
+                        </a>
+                        <h3 class="p-title"><a href="#">Reusable Cotton Pads</a></h3>
+                        <p class="p-price">€5.90</p>
+                        <button class="btn p-add">Add to cart</button>
+                    </article>
+
+                    <article class="p-card">
+                        <a href="#" class="p-media">
+                            <img src="images/index/p4.png" alt="Stainless Steel Bottle">
+                        </a>
+                        <h3 class="p-title"><a href="#">Stainless Steel Bottle</a></h3>
+                        <p class="p-price">€19.90</p>
+                        <button class="btn p-add">Add to cart</button>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="hdo-footer">
