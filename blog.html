@@ -2,132 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Eco-Shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Eco-Shop</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 
-    <!-- Favicon - it's the small icon that shows up in the browser beside the page title. Just to keep it cutie. =D -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Favicon - it's the small icon that shows up in the browser beside the page title. Just to keep it cutie. =D -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
-    <header class="site-header">
-        <!-- === Top header: is just a slim row inside the header (not a separate bar) === -->
-        <div class="top-header">
-            <div class="top-header-row">
-                <strong class="top-header-msg">Shipping in 24h • Free from €59 (Europe)</strong>
-                <!-- Right side we are goint to have the social link + auth link.-->
-                <div class="top-header-actions">
-                    <!-- Facebook icon -->
-                    <a href="https://www.facebook.com" aria-label="Facebook" class="icon-link" title="Facebook"
-                        target="_blank" rel="noopener noreferrer">
-                        <img src="images/icons/facebook.svg" alt="Facebook icon" width="20" height="20">
-                    </a>
+  <header class="site-header">
+    <!-- === Top header: is just a slim row inside the header (not a separate bar) === -->
+    <div class="top-header">
+      <div class="top-header-row">
+        <strong class="top-header-msg">Shipping in 24h • Free from €59 (Europe)</strong>
+        <!-- Right side we are goint to have the social link + auth link.-->
+        <div class="top-header-actions">
+          <!-- Facebook icon -->
+          <a href="https://www.facebook.com" aria-label="Facebook" class="icon-link" title="Facebook" target="_blank"
+            rel="noopener noreferrer">
+            <img src="images/icons/facebook.svg" alt="Facebook icon" width="20" height="20">
+          </a>
 
-                    <!-- Instagram icon -->
-                    <a href="https://www.instagram.com" aria-label="Instagram" class="icon-link" title="Instagram"
-                        target="_blank" rel="noopener noreferrer">
-                        <img src="images/icons/instagram.svg" alt="Instagram icon" width="20" height="20">
-                    </a>
+          <!-- Instagram icon -->
+          <a href="https://www.instagram.com" aria-label="Instagram" class="icon-link" title="Instagram" target="_blank"
+            rel="noopener noreferrer">
+            <img src="images/icons/instagram.svg" alt="Instagram icon" width="20" height="20">
+          </a>
 
-                    <!-- WhatsApp icon-->
-                    <a href="tel:353112223333" aria-label="WhatsApp" class="icon-link" title="WhatsApp">
-                        <img src="images/icons/whatsapp.svg" alt="Whatsapp icon" width="20" height="20">
-                    </a>
-                </div>
-            </div>
+          <!-- WhatsApp icon-->
+          <a href="tel:353112223333" aria-label="WhatsApp" class="icon-link" title="WhatsApp">
+            <img src="images/icons/whatsapp.svg" alt="Whatsapp icon" width="20" height="20">
+          </a>
         </div>
+      </div>
+    </div>
 
-        <!-- === Main header: logo + search + action === -->
-                <div class="main-header">
+    <!-- === Main header: logo + search + action === -->
+    <div class="main-header">
+      <div class="container">
+        <div class="header-row header-row--search">
+          <!-- Logo on the left -->
+          <a href="index.html" class="brand" aria-label="Eco-Store home">
+            <img src="images/Eco-Store-logo.png" alt="Eco-Store Logo" class="logo">
+          </a>
+
+          <!-- Center: Search form (pill + button)-->
+          <form class="site-search" role="search" aria-label="Site search">
+            <input id="q" name="q" type="search" placeholder="Search..." />
+            <button type="submit" aria-label="Search">
+              <img src="images/icons/search.svg" alt="" width="18" height="18">
+            </button>
+          </form>
+
+          <!--Right: Action-->
+          <div class="header-actions">
+            <a href="#" class="icon-btn" aria-label="Account">
+              <img src="images/icons/user.svg" alt="" width="22" height="22">
+            </a>
+            <a href="#" class="icon-btn" aria-label="Wishlist">
+              <img src="images/icons/heart.svg" alt="" width="22" height="22">
+              <span class="badge">0</span>
+            </a>
+            <a href="#" class="icon-btn" aria-label="Cart">
+              <img src="images/icons/cart.svg" alt="" width="22" height="22">
+              <span class="badge">0</span>
+            </a>
+            <span class="total">€0.00</span>
+          </div>
+
+          <!-- Navigation menu bar -->
+          <div class="main-nav-bar" aria-label="Main Navigation">
             <div class="container">
-                <div class="header-row header-row--search">
-                    <!-- Logo on the left -->
-                    <a href="index.html" class="brand" aria-label="Eco-Store home">
-                        <img src="images/Eco-Store-logo.png" alt="Eco-Store Logo" class="logo">
-                    </a>
-
-                    <!-- Center: Search form (pill + button)-->
-                    <form class="site-search" role="search" aria-label="Site search">
-                        <input id="q" name="q" type="search" placeholder="Search..." />
-                        <button type="submit" aria-label="Search">
-                            <img src="images/icons/search.svg" alt="" width="18" height="18">
-                        </button>
-                    </form>
-
-                    <!--Right: Action-->
-                    <div class="header-actions">
-                        <a href="#" class="icon-btn" aria-label="Account">
-                            <img src="images/icons/user.svg" alt="" width="22" height="22">
-                        </a>
-                        <a href="#" class="icon-btn" aria-label="Wishlist">
-                            <img src="images/icons/heart.svg" alt="" width="22" height="22">
-                            <span class="badge">0</span>
-                        </a>
-                        <a href="#" class="icon-btn" aria-label="Cart">
-                            <img src="images/icons/cart.svg" alt="" width="22" height="22">
-                            <span class="badge">0</span>
-                        </a>
-                        <span class="total">€0.00</span>
-                    </div>
-
-                    <!-- Navigation menu bar -->
-                    <div class="main-nav-bar" aria-label="Main Navigation">
-                        <div class="container">
-                            <div class="main-nav-list">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="products.html">Shop</a></li>
-                                    <li><a href="about.html">About us</a></li>
-                                    <li><a href="blog.html" aria-current="page">Blog</a></li>
-                                    <li><a href="contact.html">Contacts</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <div class="main-nav-list">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="products.html">Shop</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="blog.html" aria-current="page">Blog</a></li>
+                  <li><a href="contact.html">Contacts</a></li>
+                </ul>
+              </div>
             </div>
-    </header>
-
-    <main>
-
-        hgmkjh
-
-    </main>
-
-    <footer class="hdo-footer">
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="#" target="_blank">Payment & Shipping Methods</a></li>
-                        &nbsp; | &nbsp;
-                        <li><a href="#" target="_blank">FAQs</a></li>
-                        &nbsp; | &nbsp;
-                        <li><a href="#" target="_blank">Returns & Exchanges</a></li>
-                        &nbsp; | &nbsp;
-                        <li><a href="#" target="_blank">Terms & Conditions</a></li>
-                        &nbsp; | &nbsp;
-                        <li><a href="#" target="_blank">Privacy Policy</a></li>
-                        &nbsp; | &nbsp;
-                        <li><a href="#" target="_blank">Complaints Book</a></li>
-                    </ul>
-                </div>
-                <br>
-                <small class="developer">&copy; 2025 ECO-STORE.
-                    <br>
-                    ALL RIGHTS RESERVED.
-                    <br>
-                    DEVELOPED BY GIULIANA CARDOSO D´EÇA.
-                </small>
-            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+  </header>
 
+  <main>
+    <!-- HERO / Title -->
+    <section class="blog-hero">
+      <div class="container">
+        <h1>BLOG</h1>
+        <p class="subtitle">Discover our Blog!</p>
+      </div>
+    </section>
+
+    <!-- POSTS GRID -->
+    <section class="blog-list">
+      <div class="container">
+        <div class="posts-grid">
+
+          <!-- 1 -->
+          <article class="post-card">
+            <a class="post-media" href="post-sustainable-gifts.html">
+              <img src="images/blog/01.png" alt="Gift wrapped with kraft paper and natural leaves">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">10 Sustainable Gift Ideas</a>
+            </h2>
+          </article>
+
+          <!-- 2 -->
+          <article class="post-card">
+            <a class="post-media" href="post-daily-practices.html">
+              <img src="images/blog/02.png" alt="Reusable produce bags with fruits">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">4 Sustainable Practices for Everyday Life</a>
+            </h2>
+          </article>
+
+          <!-- 3 -->
+          <article class="post-card">
+            <a class="post-media" href="post-deodorant-vs-antiperspirant.html">
+              <img src="images/blog/03.png" alt="Woman applying product under her arm">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">Deodorant vs Antiperspirant: Do You Know the Difference?</a>
+            </h2>
+          </article>
+
+          <!-- 4 -->
+          <article class="post-card">
+            <a class="post-media" href="post-beeswax-wrap.html">
+              <img src="images/blog/04.png" alt="Beeswax wrap covering a fruit">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">Beeswax Wrap: What It Is, Benefits and How It Works</a>
+            </h2>
+          </article>
+
+          <!-- 5 -->
+          <article class="post-card">
+            <a class="post-media" href="post-is-sustainability-expensive.html">
+              <img src="images/blog/05.png" alt="Plant vase with green background">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">Is Living Sustainably Expensive?</a>
+            </h2>
+          </article>
+
+          <!-- 6 -->
+          <article class="post-card">
+            <a class="post-media" href="post-shampoo-bar-vs-liquid.html">
+              <img src="images/blog/06.png" alt="Person washing hair with shampoo bar">
+            </a>
+            <h2 class="post-caption">
+              <a href="#">Shampoo Bar or Liquid: What’s the Difference?</a>
+            </h2>
+          </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Blog pagination">
+          <a class="page-link is-disabled" href="#" aria-disabled="true">Previous</a>
+          <a class="page-link is-current" href="#">1</a>
+          <a class="page-link" href="#">2</a>
+          <a class="page-link" href="#">3</a>
+          <a class="page-link" href="#">Next</a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hdo-footer">
+    <div class="footer-container">
+      <div class="footer-row">
+        <div class="footer-links">
+          <ul>
+            <li><a href="#" target="_blank">Payment & Shipping Methods</a></li>
+            &nbsp; | &nbsp;
+            <li><a href="#" target="_blank">FAQs</a></li>
+            &nbsp; | &nbsp;
+            <li><a href="#" target="_blank">Returns & Exchanges</a></li>
+            &nbsp; | &nbsp;
+            <li><a href="#" target="_blank">Terms & Conditions</a></li>
+            &nbsp; | &nbsp;
+            <li><a href="#" target="_blank">Privacy Policy</a></li>
+            &nbsp; | &nbsp;
+            <li><a href="#" target="_blank">Complaints Book</a></li>
+          </ul>
+        </div>
+        <br>
+        <small class="developer">&copy; 2025 ECO-STORE.
+          <br>
+          ALL RIGHTS RESERVED.
+          <br>
+          DEVELOPED BY GIULIANA CARDOSO D´EÇA.
+        </small>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
