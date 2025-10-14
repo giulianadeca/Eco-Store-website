@@ -1,0 +1,70 @@
+
+.about-page {
+    background: #FFFFFF;
+    color: #232A23;
+    padding: 32px 0;
+}
+
+.container .about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 40px;
+    align-items: start;
+    background: #FFFFFF;
+    color: #232A23;
+}
+
+.about-grid .about-media {
+    margin: 0;
+}
+
+.about-grid .about-media img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #E6E9DF;
+}
+
+.about-page .about-text h1{
+    margin: 0;
+    color: #798645;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: .06em;
+}
+
+.about-page .about-text h2 {
+    margin: 6px o 12px 0;
+    color: #48553A;
+    font-size: 20px;
+    line-height: 1.15;
+}
+
+.about-page .about-text p{
+    margin: 14px 0;
+    color: #232A23;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-text .about-mission {
+    margin: 10px 0 16px;
+}
+
+.about-text .about-mission ul{
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.about-text .about-mission li{
+    margin: 6px 0;
+    color: #48553A;
+}
+
+.about-text .signature{
+    margin-top: 18px;
+    color: #48553A;
+    font-weight: 600;
+}
