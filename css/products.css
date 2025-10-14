@@ -1,0 +1,99 @@
+.product-page{
+    background: #FFFFFF;
+    padding: 32px 0;
+}
+
+.container .product-grid{
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+    background: #FFFFFF;
+}
+
+.prod-filters{
+    border: 1px solid #E6E9DF;
+    background: #FAFAF6;
+    border-radius: 12px;
+    padding: 0;
+}
+
+.widget-area{
+    padding: 16px;
+}
+
+/* Header row: section title + Clear button aligned */
+.filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.filter-header-title{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #48553A;
+}
+
+/* Chip Style*/
+.filter-chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.chips{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 999px;
+    border: 1px solid #E6E9DF;
+    background: #FFFFFF;
+    color: #667066;
+}
+
+/* Thin divider between fieldset */
+.filters-sep{
+  border: 0;
+  border-top: 1px solid #E6E9DF;
+  margin: 14px 0;
+}
+
+/* Fieldset */
+.filter-group{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.filter-title{
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #626F47;
+}
+
+.filter-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.filter-list label{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #232A23;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Products Grid */
