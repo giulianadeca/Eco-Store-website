@@ -1,0 +1,272 @@
+.product-page{
+    background: #FFFFFF;
+    padding: 32px 0;
+}
+
+.container .product-grid{
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    align-items: start;
+    background: #FFFFFF;
+}
+
+/* ==== Filters Sidebar*/
+.prod-filters{
+    border: 1px solid #E6E9DF;
+    background: #FAFAF6;
+    border-radius: 12px;
+    padding: 0;
+    position: sticky;
+    top: 100px;
+}
+
+.widget-area{
+    padding: 16px;
+}
+
+/* Header row: section title + Clear button aligned */
+.filter-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.filter-header-title{
+    margin: 0;
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 800;
+    color: #48553A;
+}
+
+.filter-header .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* Chip Style*/
+.filter-chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.chips{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 999px;
+    border: 1px solid #E6E9DF;
+    background: #FFFFFF;
+    color: #667066;
+}
+
+/* Thin divider between fieldset */
+.filters-sep{
+  border: 0;
+  border-top: 1px solid #E6E9DF;
+  margin: 14px 0;
+}
+
+/* Fieldset */
+.filter-group{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.filter-title{
+    margin: 0 0 8px 0;
+    font-size: clamp(13px, 1.4vw, 14px);
+    font-weight: 800;
+    color: #626F47;
+}
+
+.filter-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.filter-list label{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #232A23;
+    font-size: clamp(12px, 1.3vw, 13px);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.filter-list label:hover {
+    color: #626F47;
+}
+
+.filter-list input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Toggle button for mobile filters */
+.filters-toggle-btn {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 998;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: #798645;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 4px 12px rgba(121, 134, 69, 0.4);
+    font-weight: 700;
+    cursor: pointer;
+}
+/*==== Responsive Design ==== */
+/* Large Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .product-page {
+        padding: 24px 0;
+    }
+    
+    .container .product-grid {
+        grid-template-columns: 240px 1fr;
+        gap: 20px;
+    }
+    
+    .prod-filters {
+        position: static;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+    .product-page {
+        padding: 20px 0;
+    }
+    
+    .container .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    /* Make filters collapsible/toggleable */
+    .prod-filters {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        z-index: 1001;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        border-radius: 0;
+        border: none;
+        border-right: 1px solid #E6E9DF;
+    }
+    
+    body.filters-open .prod-filters {
+        left: 0;
+    }
+    
+    /* Backdrop overlay when filters are open */
+    body.filters-open::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    
+    /* Show toggle button */
+    .filters-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .filters-toggle-btn::before {
+        content: "🔍";
+        font-size: 16px;
+    }
+}
+
+/* Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+    .product-page {
+        padding: 16px 0;
+    }
+    
+    .prod-filters {
+        width: 90%;
+        max-width: 100%;
+    }
+    
+    .widget-area {
+        padding: 14px;
+    }
+    
+    .filter-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .filter-header .btn {
+        width: 100%;
+    }
+    
+    .filter-chips {
+        gap: 6px;
+    }
+    
+    .chips {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+    
+    .filter-sep {
+        margin: 12px 0;
+    }
+    
+    .filter-title {
+        margin-bottom: 6px;
+    }
+    
+    .filter-list {
+        gap: 6px;
+    }
+    
+    .filter-list label {
+        gap: 6px;
+    }
+    
+    .filters-toggle-btn {
+        bottom: 70px;
+        right: 15px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Very small phones (up to 360px) */
+@media (max-width: 360px) {
+    .prod-filters {
+        width: 100%;
+    }
+    
+    .widget-area {
+        padding: 12px;
+    }
+}

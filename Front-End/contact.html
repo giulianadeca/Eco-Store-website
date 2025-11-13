@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Eco-Shop</title>
+    <title>Contact Us - Eco-Shop</title>
 
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/header.css">
-    <link rel="stylesheet" href="css/about.css">
 
     <!-- Favicon - it's the small icon that shows up in the browser beside the page title. Just to keep it cutie. =D -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script src="script.js" defer></script>
+    <script src="responsive.js" defer></script>
 
 </head>
 
@@ -78,80 +81,102 @@
                     </div>
 
                     <!-- Navigation menu bar -->
-                    <div class="main-nav-bar" aria-label="Main Navigation">
+                    <nav class="main-nav-bar" aria-label="Main Navigation">
                         <div class="container">
                             <div class="main-nav-list">
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="products.html">Shop</a></li>
-                                    <li><a href="about.html" aria-current="page">About us</a></li>
+                                    <li><a href="about.html">About us</a></li>
                                     <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contacts</a></li>
+                                    <li><a href="contact.html" aria-current="page">Contacts</a></li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
     </header>
 
     <main>
-        <section class="about-page">
+        <!-- ==== Intro contact page ==== -->
+        <section class="contact-intro">
             <div class="container">
-                <div class="about-grid">
-                    <!--Image in the left side-->
-                    <div class="about-media">
-                        <img src="images/family.png" alt="Family photo">
-                    </div>
-
-
-                    <!--Text in the right side-->
-                    <section class="about-text">
-                        <h1>🐾 About Us</h1>
-                        <h2>Hi there! We’re not your typical business owners.</h2>
-
-                        <p>
-                            Our shop is proudly run by a <strong>Golden Retriever and a Labrador couple</strong>, two
-                            very
-                            responsible (and slightly goofy) dogs. Together with our energetic <strong>puppies</strong>,
-                            a
-                            wise
-                            (and
-                            a little sassy) <strong>Siamese cat</strong>, and our talkative roommate, the <strong>Green
-                                Macaw</strong>, we make quite the team.
-                        </p>
-                        <p>
-                            We started this adventure because, well, we love the planet almost as much as we love belly
-                            rubs
-                            and
-                            long walks. 🌍✨
-                            Our mission is simple:
-                        </p>
-                        
-                        <div class="about-mission">
-                            <ul>
-                                <li>Fetch the best eco-friendly products.</li>
-                                <li>Keep packaging light and plastic-free (no chew toys wasted!).</li>
-                                <li>Make sure everyone – from small producers to our human customers – gets a fair deal.
-                                </li>
-                            </ul>
-                        </div>
-
-                        <p>
-                            So if you ever wondered who’s behind the screen… it’s basically a family portrait of wagging
-                            tails,
-                            curious paws,
-                            and one parrot that just won’t stop talking. 🦜💚
-                        </p>
-
-                        <p class="signature">
-                            🐶🐶🐱🦜💚 Sending you lots of <em>lambejos</em> (doggy kisses)!
-                        </p>
-                    </section>
+                <div class="ci-copy">
+                    <h1>Contact us</h1>
+                    <p>Questions about products, orders, or partnerships? Send us a message — we’ll get back within 1–2
+                        business days.</p>
+                    <ul class="ci-details">
+                        <li><strong>Email: </strong><a href="mailto:info@ecostore.com">info@ecostore.com</a></li>
+                        <li><strong>Phone: </strong><a href="tel:+353112223333">(+353) 11 222 3333</a></li>
+                        <li><strong>Hours: </strong>Mon–Fri, 9:00–17:30 (Dublin time)</li>
+                    </ul>
                 </div>
             </div>
         </section>
+
+        <!-- ==== Form ==== -->
+        <section class="cf-section">
+            <div class="container">
+                <!-- Banner success/error overwal-->
+                <form id="contact-form" novalidate onsubmit="return validateForm()">
+                    <fieldset class="cf-fieldset">
+
+                        <!-- 1º line-->
+                        <div class="cf-grid">
+                            <div class="cf-control">
+                                <label for="firstName">First name *</label>
+                                <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+                            </div>
+
+                            <div class="cf-control">
+                                <label for="lastName">Last name *</label>
+                                <input id="lastName" name="lastName" type="text" autocomplete="family-name" required>
+                            </div>
+                        </div>
+
+                        <!-- 2º Line -->
+                        <div class="cf-grid">
+                            <div class="cf-control">
+                                <label for="email">Email *</label>
+                                <input id="email" name="email" type="email" autocomplete="email" required>
+                            </div>
+
+                            <div class="cf-control">
+                                <label for="phone">Phone (optional)</label>
+                                <input id="phone" name="phone" type="tel" inputmode="tel"
+                                    placeholder="+353 (11) 222 3333">
+                                <p class="cf-hint">Use country code if outside Ireland.</p>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="cf-control">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" minlength="10" required
+                                placeholder="How can we help? Please include details that help us answer faster."></textarea>
+                        </div>
+                        <br>
+                        <!-- Consent Terms -->
+                        <div class="cf-control cf-check">
+                            <input id="consent" name="consent" type="checkbox" required>
+                            <label for="consent">I agree to the processing of my data according to the <a
+                                    href="#">Privacy Policy</a>. *</label>
+                        </div>
+
+                        <div class="cf-actions">
+                            <button class="btn" type="submit">Send message</button>
+                        </div>
+                        <small class="cf-footnote">Fields marked with * are required.</small>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
     </main>
+
+    <!-- === Scroll to top Button-->
+    <button class="scrollToTop" aria-label="Scroll to top"></button>
 
     <footer class="hdo-footer">
         <div class="footer-container">
@@ -181,7 +206,6 @@
             </div>
         </div>
     </footer>
-
 
 </body>
 

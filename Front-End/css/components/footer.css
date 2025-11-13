@@ -1,0 +1,134 @@
+.hdo-footer {
+    background: #626F47;
+    color: #F2F4EC;
+}
+
+/* 
+I used ".hdo-footer .footer-container" to keep the style limited to the footer. 
+This avoids conflicts if ".footer-container" appears in other parts of the site 
+and makes the hierarchy clearer. 
+*/
+.hdo-footer .footer-container {
+    width: 100%;
+    margin-inline: auto;        /* No space on top/bottom, but centered on the sides. */
+    padding: 28px 16px;
+}
+
+/* The row organizes the footer content.
+I use flexbox in column direction to keep everything centered vertically,
+and gap to control the space between the groups. */
+.hdo-footer .footer-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* center all itens horizontally */
+    gap: 18px;                  /* space between links and credits */
+    text-align: center;
+}
+
+.hdo-footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+}
+
+.hdo-footer .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hdo-footer .footer-links ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.hdo-footer .footer-links ul li a {
+    color: #EAEFE0;
+    text-decoration: none;
+    font-size: clamp(14px, 1.5vw, 16px);
+    transition: color 0.3s ease;
+}
+
+.hdo-footer .footer-links ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.hdo-footer .developer {
+    font-size: clamp(11px, 1.2vw, 12px);
+    color: #EAEFE0;
+    line-height: 1.6;           /*space bewtween lines*/
+    letter-spacing: 1px;        /*space between letters*/
+}
+
+/*==== Responsive Design ==== */
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+    .hdo-footer .footer-container {
+        padding: 24px 14px;
+    }
+    
+    .hdo-footer .footer-row {
+        gap: 16px;
+    }
+    
+    .hdo-footer .footer-links {
+        gap: 10px 20px;
+    }
+    
+    .hdo-footer .footer-links ul li {
+        margin: 0 8px;
+    }
+}
+
+/* Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+    .hdo-footer .footer-container {
+        padding: 20px 12px;
+    }
+    
+    .hdo-footer .footer-row {
+        gap: 14px;
+    }
+    
+    .hdo-footer .footer-links {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .hdo-footer .footer-links ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .hdo-footer .footer-links ul li {
+        display: block;
+        margin: 0;
+        padding: 4px 0;
+    }
+    
+    /* Hide separators on mobile */
+    .hdo-footer .footer-links ul li:not(:last-child)::after {
+        content: '';
+        display: none;
+    }
+    
+    .hdo-footer .developer {
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Very small phones (up to 360px) */
+@media (max-width: 360px) {
+    .hdo-footer .footer-container {
+        padding: 18px 10px;
+    }
+}
